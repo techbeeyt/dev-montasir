@@ -37,10 +37,6 @@ const App = () => {
     //eslint-disable-next-line
   }, [])
 
-
-  // scrollRef.current.addEventListener('scroll', () => {
-  //   // var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollHeight
-  // })
   const handleScroll = () => {
     dispatch(setScrollPosition({
       intro: introRef.current.getBoundingClientRect().top,
@@ -81,7 +77,7 @@ const App = () => {
           <div ref={contactRef} className='h-screen px-4 scroll-Section'>fsdaf</div>
         </div>
         <div className='col-span-3 relative'>
-          <div className="fixed right-0 top-0 w-1/4 h-screen z-20 bg-zinc-900">
+          <div className="fixed right-0 top-0 w-1/4 h-screen z-20 bg-stone-900">
             <RightSideBar />
           </div>
         </div>

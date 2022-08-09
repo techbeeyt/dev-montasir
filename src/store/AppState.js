@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import scrollDirection from '../utils/ScrollDir';
 
 export const AppState = createSlice({
     name: 'appstate',
@@ -17,7 +18,8 @@ export const AppState = createSlice({
             courses: 10000,
             contact: 10000
         },
-        insideViewport: 'intro'
+        insideViewport: 'intro',
+        scrollDirection: scrollDirection.SCROLL_DOWN,
     },
     reducers: {
         setScrollBreakPoints: (state, action) => {
@@ -28,10 +30,13 @@ export const AppState = createSlice({
         },
         setInsideViewPort : (state, action) => {
             state.insideViewport = action.payload;
+        },
+        setScrollDirection : (state, action) => {
+            state.scrollDirection = action.payload;
         }
     },
 });
 
-export const { setScrollBreakPoints, setScrollPosition, setInsideViewPort } = AppState.actions;
+export const { setScrollBreakPoints, setScrollPosition, setInsideViewPort, setScrollDirection } = AppState.actions;
 
 export default AppState.reducer;

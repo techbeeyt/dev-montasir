@@ -54,9 +54,9 @@ const App = () => {
   }
   return (
     <>
-      <div className='w-screen grid grid-cols-12 bg-zinc-800 min-h-screen'>
+      <div className='w-screen grid grid-cols-12 min-h-screen'>
         <div className='col-span-2'>
-          <div className='fixed z-20 flex flex-col items-center p-4 top-0 left-0 w-1/6 bg-zinc-700 h-full'>
+          <div className='fixed z-20 flex flex-col items-center p-4 top-0 left-0 w-1/6 h-full bg-blue-500 bg-opacity-25'>
             <LeftSideBar refData={scrollRef} />
           </div>
         </div>
@@ -77,7 +77,7 @@ const App = () => {
           <div ref={contactRef} className='h-screen px-4 scroll-Section'>fsdaf</div>
         </div>
         <div className='col-span-3 relative'>
-          <div className="fixed right-0 top-0 w-1/4 h-screen z-20 bg-stone-900">
+          <div className="fixed right-0 top-0 w-1/4 h-screen z-20">
             <RightSideBar />
           </div>
         </div>

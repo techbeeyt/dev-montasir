@@ -13,12 +13,12 @@ const LeftSideBar = ({ refData }) => {
   },[insideViewport])
   return (
     <>
-      <Link className='text-gray-300 text-2xl font-Josefin-Slab-600' to="#top">dev.Montasir</Link>
+      <Link className='text-sky-100 text-3xl font-Josefin-Slab-600' to="/">dev.Montasir</Link>
             <div className='flex mt-28 justify-center items-center'>
               <ul className='text-2xl flex flex-col items-center text-slate-300 font-Kanit gap-12'>
                 <li onClick={() => {
                     refData.current.scrollTo(0, scrollBreakPoints.intro);
-                  }} className='font-Kanit transition-all duration-300 rounded-sm hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+                  }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
                   {
                     insideViewport === 'intro' ? (
                       <motion.div animate={{x:0}} initial={{x:-100}} className="text-2xl font-semibold">Introduction</motion.div>
@@ -27,7 +27,7 @@ const LeftSideBar = ({ refData }) => {
                 </li>
                 <li onClick={() => {
                     refData.current.scrollTo(0, scrollBreakPoints.skills);
-                  }} className='font-Kanit transition-all duration-300 rounded-sm hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+                  }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
                     
                   {
                     insideViewport === 'skills' ? (
@@ -37,7 +37,7 @@ const LeftSideBar = ({ refData }) => {
                 </li>
                 <li onClick={() => {
                     refData.current.scrollTo(0, scrollBreakPoints.projects);
-                  }} className='font-Kanit transition-all duration-300 rounded-sm hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+                  }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
                   
                   {
                     insideViewport === 'projects' ? (
@@ -47,7 +47,7 @@ const LeftSideBar = ({ refData }) => {
                 </li>
                 <li onClick={() => {
                     refData.current.scrollTo(0, scrollBreakPoints.courses);
-                  }} className='font-Kanit transition-all duration-300 rounded-sm hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+                  }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
                   
                   {
                     insideViewport === 'courses' ? (
@@ -58,7 +58,7 @@ const LeftSideBar = ({ refData }) => {
                 </li>
                 <li onClick={() => {
                     refData.current.scrollTo(0, scrollBreakPoints.contact);
-                  }} className='font-Kanit transition-all duration-300 rounded-sm hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+                  }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
                     
                   {
                     insideViewport === 'contact' ? (

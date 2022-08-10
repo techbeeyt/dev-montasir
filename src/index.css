@@ -12,6 +12,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_960_720.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
   /* -ms-overflow-style: none; 
   scrollbar-width: none;   */
 }
@@ -64,4 +67,8 @@ code {
 
 .px2500 {
   height: 25000px;
+}
+
+.intro span {
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }

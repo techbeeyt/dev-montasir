@@ -4,6 +4,7 @@ import LeftSideBar from './components/LeftSideBar/LeftSideBar'
 import RightSideBar from './components/RightSideBar/RightSideBar';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 import { setScrollBreakPoints, setScrollPosition, setInsideViewPort } from './store/AppState';
+import Skills from './components/Skills/Skills';
 
 const App = () => {
   const introRef = useRef(null);
@@ -64,13 +65,8 @@ const App = () => {
         <div onScroll={handleScroll} id="scrollable" ref={scrollRef} className='col-span-7 overflow-y-scroll hideScrollBar scroll-Container scroll-smooth'>
           <div className='h-20'>{}</div>
           <div ref={introRef}><Intro /></div>
-          <div ref={skillsRef} className='h-screen px-4 bg-gray-700 scroll-Section'>
-            <button onClick={(e) => {
-              e.target.parentElement.parentElement.scrollTo(0,2000)
-              console.log(e.target.parentElement.parentElement);
-            }}>
-              Scroll
-            </button>
+          <div ref={skillsRef} className='h-screen px-4 scroll-Section'>
+            <Skills />
           </div>
           <div ref={projectsRef} className='h-screen px-4 scroll-Section'>Projects</div>
           <div ref={coursesRef} className='h-screen px-4 bg-violet-600 scroll-Section'>sdaf</div>

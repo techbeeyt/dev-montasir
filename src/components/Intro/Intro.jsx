@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Intro = () => {
   return (
     <div className='intro scroll-Section'>
-        <motion.div animate={{y:0}} initial={{y:300}} id='intro' className='h-screen px-4 flex justify-center items-center'>
+        <motion.div animate={{y:0}} initial={{y:300}} id='intro' className='h-screen px-4 flex flex-col justify-center items-center'>
             <div className='flex flex-col justify-center items-center'>
                 <motion.span animate={{
                     scale: 1,
@@ -12,6 +12,9 @@ const Intro = () => {
                 <motion.span animate={{
                     scale: 1,
                 }} initial={{scale: 0.8}} className='font-Josefin-Slab text-2xl text-slate-100'>Passionate Web Developer</motion.span>
+            </div>
+            <div className='mt-10 flex justify-center items-center'>
+                <input className='px-4 py-2 w-64 rounded-l-sm bg-slate-100 font-Nunito-light' type="email" placeholder='Want interesting info..?'/><button className='subscribe-btn px-4 py-2 text-gray-100 font-Nunito-light rounded-r-sm'>Subscribe</button>
             </div>
         </motion.div>
     </div>

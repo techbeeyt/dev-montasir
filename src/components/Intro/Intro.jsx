@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Quote from './Quote';
 
 const Intro = () => {
   return (
@@ -12,9 +13,6 @@ const Intro = () => {
                 <motion.span animate={{
                     scale: 1,
                 }} initial={{scale: 0.8}} className='font-Josefin-Slab text-2xl text-slate-100'>Passionate Web Developer</motion.span>
-            </div>
-            <div className='mt-10 flex justify-center items-center'>
-                <input className='px-4 py-2 w-64 rounded-l-sm bg-slate-100 font-Nunito-light' type="email" placeholder='Want interesting info..?'/><button className='subscribe-btn px-4 py-2 text-gray-100 font-Nunito-light rounded-r-sm'>Subscribe</button>
             </div>
         </motion.div>
     </div>

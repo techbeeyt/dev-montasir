@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
 import SubIntro from './SubIntro';
+import SubSkills from './SubSkills';
 
 
 const RightSideBar = () => {
@@ -18,9 +19,7 @@ const RightSideBar = () => {
 
         {
           insideViewport === 'skills' ? (
-            <motion.div animate={{opacity: 1}} transition={{duration:0.5, delay: 0.5}} initial={{opacity: 0}} className=''>
-              <div className='bg-slate-400 h-56 p-10'>Im A very Good Boy</div>
-            </motion.div>
+            <SubSkills />
           ) : null
         }
 

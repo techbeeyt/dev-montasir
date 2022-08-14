@@ -19,7 +19,7 @@ const Quote = () => {
         {
             showQuote ? (
                 
-                <motion.div className='relative rounded-3xl bg-black bg-opacity-50 py-4 flex flex-col justify-center items-center right-72 top-2'
+                <motion.div className='backdrop-blur-md relative rounded-3xl bg-black bg-opacity-50 py-4 flex flex-col justify-center items-center right-72 top-2'
         initial={{
             x:150,
             scaleX: 0,

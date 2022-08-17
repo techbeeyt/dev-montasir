@@ -14,7 +14,7 @@ const Skills = () => {
       <div className='flex flex-col py-8 px-4'>
           <h1 className='text-white text-lg font-Nunito-regular mb-2'>Web Programming / Frameworks</h1>
         <div className='flex justify-around items-center'>
-          <div className='p-8 rounded-lg bg-slate-300 w-32 h-32 hover:shadow-2xl transition-all duration-150 ease-in hover:scale-105' onMouseEnter={mouseIn}>
+          <div className='p-8 rounded-lg bg-slate-300 w-32 h-32 hover:shadow-2xl transition-all duration-100 ease-in active:scale-105 active:outline-4 active:outline-gray-200 active:outline' onMouseEnter={mouseIn}>
             <img src="https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png" alt='nextjs' />
           </div>
           <div className='p-8 rounded-lg bg-slate-700 w-32 h-32'>

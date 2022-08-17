@@ -5,6 +5,7 @@ import RightSideBar from './components/RightSideBar/RightSideBar';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 import { setScrollBreakPoints, setScrollPosition, setInsideViewPort } from './store/AppState';
 import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
 
 const App = () => {
   const introRef = useRef(null);
@@ -68,7 +69,9 @@ const App = () => {
           <div ref={skillsRef} className='h-screen pl-4 pt-4 pb-4 scroll-Section'>
             <Skills />
           </div>
-          <div ref={projectsRef} className='h-screen px-4 scroll-Section overflow-y-scroll'>Projects</div>
+          <div ref={projectsRef} className='h-screen scroll-Section overflow-y-scroll hideScrollBar pl-4 pt-4 pb-4'>
+            <Projects />
+          </div>
           <div ref={coursesRef} className='h-screen px-4 bg-violet-600 scroll-Section'>sdaf</div>
           <div ref={contactRef} className='h-screen px-4 scroll-Section'>fsdaf</div>
         </div>

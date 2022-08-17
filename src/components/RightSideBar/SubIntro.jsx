@@ -43,7 +43,7 @@ const SubIntro = () => {
                   </div>
                 </div>
               </div>
-              <h1 className='mt-6 px-4 text-white font-Nunito-regular'>Find out more on</h1>
+              <h1 className='mt-auto px-4 text-white font-Nunito-regular'>Find out more on</h1>
               <div className='flex gap-6 mb-4 mt-2'>
                 <ToolTip title='Github'>
                   <button className='text-gray-100' onClick={() => window.open('https://github.com/techbeeyt', '_blank')}><BsGithub size={24} /></button>

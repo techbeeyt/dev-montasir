@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import scrollDirection from '../utils/ScrollDir';
+import scrollDirection from '../utils/ScrollDirection/ScrollDir';
 
 export const AppState = createSlice({
     name: 'appstate',

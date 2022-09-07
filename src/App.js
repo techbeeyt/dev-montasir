@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux/es/exports';
 import { setScrollBreakPoints, setScrollPosition, setInsideViewPort } from './store/AppState';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
+import Courses from './components/Courses/Courses';
 
 const App = () => {
   const introRef = useRef(null);
@@ -47,7 +48,7 @@ const App = () => {
       courses: coursesRef.current.getBoundingClientRect().top,
       contact: contactRef.current.getBoundingClientRect().top,
     }));
-    console.log(scrollPosition);
+    // console.log(scrollPosition);
     for(const item in scrollPosition){
       if(scrollPosition[item] >= -5 && scrollPosition[item] <= window.innerHeight - 10){
         dispatch(setInsideViewPort(item.toString()));
@@ -69,10 +70,12 @@ const App = () => {
           <div ref={skillsRef} className='h-screen pl-4 pt-4 pb-4 scroll-Section'>
             <Skills />
           </div>
-          <div ref={projectsRef} className='h-screen scroll-Section overflow-y-scroll hideScrollBar pl-4 pt-4 pb-4'>
+          <div ref={projectsRef} className='h-screen scroll-Section pl-4 pb-4'>
             <Projects />
           </div>
-          <div ref={coursesRef} className='h-screen px-4 bg-violet-600 scroll-Section'>sdaf</div>
+          <div ref={coursesRef} className='h-screen scroll-Section'>
+            <Courses />
+          </div>
           <div ref={contactRef} className='h-screen px-4 scroll-Section'>fsdaf</div>
         </div>
         <div className='hidden lg:block lg:col-span-3 relative'>

@@ -95,3 +95,7 @@ code {
   font-family: "DynaPuff";
   font-weight: 700;
 }
+
+.scrollbar {
+  z-index: 199;
+}

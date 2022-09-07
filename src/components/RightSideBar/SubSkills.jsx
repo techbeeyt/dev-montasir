@@ -28,72 +28,8 @@ const SubSkills = () => {
                   details='Photo sharing social media site'
                   github_link='https://'
                   live_link='h'
-                  key='MyBlogSite'
+                  key='PhotoSharingSite'
                 />
-
-                <ProjectListSm 
-                  project_img='https://mllj2j8xvfl0.i.optimole.com/Lsv2lkg.pJlS~36fbd/w:auto/h:auto/q:90/f:avif/https://s15165.pcdn.co/wp-content/uploads/2018/05/linkedin.jpg'
-                  project='mePhoto'
-                  details='Photo sharing social media site'
-                  github_link='https://'
-                  live_link='h'
-                  key='MyBlogSite'
-                />
-
-                <ProjectListSm 
-                  project_img='https://mllj2j8xvfl0.i.optimole.com/Lsv2lkg.pJlS~36fbd/w:auto/h:auto/q:90/f:avif/https://s15165.pcdn.co/wp-content/uploads/2018/05/linkedin.jpg'
-                  project='mePhoto'
-                  details='Photo sharing social media site'
-                  github_link='https://'
-                  live_link='h'
-                  key='MyBlogSite'
-                />
-
-                <ProjectListSm 
-                  project_img='https://mllj2j8xvfl0.i.optimole.com/Lsv2lkg.pJlS~36fbd/w:auto/h:auto/q:90/f:avif/https://s15165.pcdn.co/wp-content/uploads/2018/05/linkedin.jpg'
-                  project='mePhoto'
-                  details='Photo sharing social media site'
-                  github_link='https://'
-                  live_link='h'
-                  key='MyBlogSite'
-                />
-
-                <ProjectListSm 
-                  project_img='https://mllj2j8xvfl0.i.optimole.com/Lsv2lkg.pJlS~36fbd/w:auto/h:auto/q:90/f:avif/https://s15165.pcdn.co/wp-content/uploads/2018/05/linkedin.jpg'
-                  project='mePhoto'
-                  details='Photo sharing social media site'
-                  github_link='https://'
-                  live_link='h'
-                  key='MyBlogSite'
-                />
-
-                <ProjectListSm 
-                  project_img='https://mllj2j8xvfl0.i.optimole.com/Lsv2lkg.pJlS~36fbd/w:auto/h:auto/q:90/f:avif/https://s15165.pcdn.co/wp-content/uploads/2018/05/linkedin.jpg'
-                  project='mePhoto'
-                  details='Photo sharing social media site'
-                  github_link='https://'
-                  live_link='h'
-                  key='MyBlogSite'
-                />
-
-                <ProjectListSm 
-                  project_img='https://mllj2j8xvfl0.i.optimole.com/Lsv2lkg.pJlS~36fbd/w:auto/h:auto/q:90/f:avif/https://s15165.pcdn.co/wp-content/uploads/2018/05/linkedin.jpg'
-                  project='mePhoto'
-                  details='Photo sharing social media site'
-                  github_link='https://'
-                  live_link='h'
-                  key='MyBlogSite'
-                />
-
-                <ProjectListSm 
-                  project_img='https://mllj2j8xvfl0.i.optimole.com/Lsv2lkg.pJlS~36fbd/w:auto/h:auto/q:90/f:avif/https://s15165.pcdn.co/wp-content/uploads/2018/05/linkedin.jpg'
-                  project='mePhoto'
-                  details='Photo sharing social media site'
-                  github_link='https://'
-                  live_link='h'
-                  key='MyBlogSite'
-                />
-
               </div>
             </motion.div>
   )

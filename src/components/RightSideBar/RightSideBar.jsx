@@ -24,11 +24,11 @@ const RightSideBar = () => {
           ) : null
         }
 
-        {
+        {/* {
           insideViewport === 'projects' ? (
             <SubProjects />
           ) : null
-        }
+        } */}
 
         {
           insideViewport === 'courses' ? (

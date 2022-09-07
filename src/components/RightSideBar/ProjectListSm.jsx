@@ -1,5 +1,7 @@
 import { SiNetlify } from 'react-icons/si';
 import { AiOutlineGithub } from 'react-icons/ai';
+import BtnPrimary from '../Buttons/BtnPrimary';
+import BtnSecondary from '../Buttons/BtnSecondary';
 
 const ProjectListSm = ({project_img, project, details, live_link, github_link}) => {
   return (
@@ -19,8 +21,8 @@ const ProjectListSm = ({project_img, project, details, live_link, github_link}) 
             </div>
         </div>
         <div className='flex justify-between items-center mt-4 gap-2'>
-            <button className='bg-blue-600 text-white font-Nunito-light px-3 py-2 rounded-sm flex justify-center items-center gap-1'><SiNetlify /> Live Demo</button>
-            <button className='bg-gray-700 text-white font-Nunito-light p-2 rounded-sm flex justify-center items-center gap-1'><AiOutlineGithub /> Github Repo</button>
+            <BtnPrimary><SiNetlify /> Live Demo</BtnPrimary>
+            <BtnSecondary><AiOutlineGithub /> Github Repo</BtnSecondary>
         </div>
     </div>
   )

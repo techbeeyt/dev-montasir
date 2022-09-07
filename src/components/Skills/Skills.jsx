@@ -1,4 +1,7 @@
 import React from 'react'
+import ToolTip from '../ToolTip/ToolTip'
+import SkillCard from './SkillCard';
+import { themeMode } from '../../utils/enums';
 
 const Skills = () => {
   const mouseIn = (e) => {
@@ -14,18 +17,35 @@ const Skills = () => {
       <div className='flex flex-col py-8 px-4'>
           <h1 className='text-white text-lg font-Nunito-regular mb-2'>Web Programming / Frameworks</h1>
         <div className='flex justify-around items-center'>
-          <div className='p-8 rounded-lg bg-slate-300 w-32 h-32 hover:shadow-2xl transition-all duration-100 ease-in active:scale-105 active:outline-4 active:outline-gray-200 active:outline' onMouseEnter={mouseIn}>
-            <img src="https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png" alt='nextjs' />
-          </div>
-          <div className='p-8 rounded-lg bg-slate-700 w-32 h-32'>
-            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt='reactjs' />
-          </div>
-          <div className='p-8 rounded-lg bg-yellow-400 w-32 h-32 flex justify-center items-center'>
-            <img src='https://www.seekpng.com/png/full/80-803385_open-javascript-logo-png-white.png' alt='vanillajs' />
-          </div>
-          <div className='p-8 rounded-lg bg-gray-200 w-32 h-32 flex justify-center items-center'>
-            <img src='https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_typescript_icon_130108.png' alt='typescript' />
-          </div>
+          <ToolTip title="Next JS">
+            <SkillCard 
+              imgSrc="https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png"
+              altText="nextjs"  
+            />
+          </ToolTip>
+          <ToolTip title="React JS">
+            <SkillCard 
+                imgSrc="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                altText="reactjs"
+                vairant={themeMode.DARK}
+              />
+          </ToolTip>
+          
+          <ToolTip title="Javascript">
+            <SkillCard 
+              imgSrc='https://www.seekpng.com/png/full/80-803385_open-javascript-logo-png-white.png'
+              altText='javascript'
+              bgColor='bg-yellow-400'
+            />
+          </ToolTip>
+          
+          <ToolTip title="Typescript">
+            <SkillCard 
+              imgSrc="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_typescript_icon_130108.png"
+              altText="typescript"
+            />
+          </ToolTip>
+
         </div>
 
         <h1 className='text-white text-lg font-Nunito-regular mt-6 mb-2'>UI / UX design</h1>

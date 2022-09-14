@@ -67,10 +67,10 @@ const App = () => {
         <div onScroll={handleScroll} id="scrollable" ref={scrollRef} className='col-span-10 lg:col-span-7 overflow-y-scroll hideScrollBar scroll-Container scroll-smooth'>
           <div className='h-20'>{}</div>
           <div ref={introRef}><Intro /></div>
-          <div ref={skillsRef} className='h-screen pl-4 pt-4 pb-4 scroll-Section'>
+          <div ref={skillsRef} className='h-screen p-4 pl-2 lg:pl-4 lg:pt-4 lg:pb-4 scroll-Section overflow-y-scroll'>
             <Skills />
           </div>
-          <div ref={projectsRef} className='h-screen scroll-Section pl-4 pb-4'>
+          <div ref={projectsRef} className='h-screen scroll-Section pl-2 lg:pl-4 lg:pb-4'>
             <Projects />
           </div>
           <div ref={coursesRef} className='h-screen scroll-Section'>

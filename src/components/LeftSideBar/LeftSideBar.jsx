@@ -36,7 +36,7 @@ const LeftSideBar = ({ refData }) => {
                 <motion.div animate={{x:0}} initial={{x:-100}} className="hidden lg:block text-2xl font-semibold">Introduction</motion.div>
                 <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold"><TiInfoLarge /></motion.div>
                 </>
-              ) : <><div className='hidden lg:block'>Introduction</div><div className='lg:hidden text-white'><TiInfoLarge /></div></>
+              ) : <><div className='hidden lg:block'>Introduction</div><div className='lg:hidden'><TiInfoLarge /></div></>
             }
           </li>
           <li onClick={() => {

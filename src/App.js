@@ -58,8 +58,8 @@ const App = () => {
   return (
     <>
       <div className='w-screen grid grid-cols-12 min-h-screen'>
-        <div className='col-span-2'>
-          <div className='fixed z-20 flex flex-col items-center lg:p-4 top-0 left-0 h-full bg-blue-800 lg:bg-blue-500 lg:bg-opacity-25'>
+        <div className='relative col-span-2'>
+          <div className='fixed z-20 flex flex-col items-center lg:p-4 top-0 left-0 h-full bg-blue-800 lg:bg-blue-500 lg:bg-opacity-25 lg:w-1/6'>
             <LeftSideBar refData={scrollRef} />
           </div>
         </div>
@@ -67,7 +67,7 @@ const App = () => {
         <div onScroll={handleScroll} id="scrollable" ref={scrollRef} className='col-span-10 lg:col-span-7 overflow-y-scroll hideScrollBar scroll-Container scroll-smooth'>
           <div className='h-20'>{}</div>
           <div ref={introRef}><Intro /></div>
-          <div ref={skillsRef} className='h-screen p-4 pl-2 lg:pl-4 lg:pt-4 lg:pb-4 scroll-Section overflow-y-scroll'>
+          <div ref={skillsRef} className='h-screen p-4 pl-6 lg:pl-4 lg:pt-4 lg:pb-4 scroll-Section overflow-y-scroll'>
             <Skills />
           </div>
           <div ref={projectsRef} className='h-screen scroll-Section pl-2 lg:pl-4 lg:pb-4'>

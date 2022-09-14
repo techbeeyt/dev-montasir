@@ -20,9 +20,9 @@ const ProjectListLg = ({title, description, live_link, github_link}) => {
           <div onClick={() => {
             console.log("Hello");
           }}>
-            <BtnPrimary><SiNetlify /> Live Demo</BtnPrimary>
+            <BtnPrimary><SiNetlify /> Live</BtnPrimary>
           </div>
-          <BtnSecondary><AiOutlineGithub /> Github Repo</BtnSecondary>
+          <BtnSecondary><AiOutlineGithub /> Github</BtnSecondary>
         </div>
     </div>
   )

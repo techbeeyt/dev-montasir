@@ -10,11 +10,11 @@ const Skills = () => {
   return (
     <div className='bg-blue-500 bg-opacity-20 p-4 rounded-lg shadow-xl backdrop-blur-lg'>
       <div className='w-full flex justify-center items-center'>
-        <h1 className='text-3xl font-DynaPuff-bold text-gray-100'>Web Technologies I use:</h1>
+        <h1 className='hidden lg:block text-3xl font-DynaPuff-bold text-gray-100'>Web Technologies I use:</h1>
       </div>
 
 
-      <div className='flex flex-col py-8 px-4'>
+      <div className='flex flex-col lg:py-8 px-4'>
           <h1 className='text-white text-lg font-Nunito-regular mb-2'>Web Programming / Frameworks</h1>
         <div className='flex justify-center items-center flex-wrap gap-2'>
           <ToolTip title="Next JS">

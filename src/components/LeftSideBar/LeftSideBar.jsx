@@ -25,72 +25,72 @@ const LeftSideBar = ({ refData }) => {
       to="/">
         devtasir
       </div>
-      <div className='flex mt-28 justify-center items-center px-2'>
-        <ul className='text-2xl flex flex-col items-center text-slate-300 font-Kanit gap-12'>
+      <div className='flex mt-28 justify-center items-center px-1 lg:px-2'>
+        <ul className='text-2xl flex flex-col items-center font-Kanit gap-12'>
           <li onClick={() => {
               refData.current.scrollTo(0, scrollBreakPoints.intro);
-            }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+            }} className='font-Kanit transition-all duration-300 rounded-md lg:hover:bg-slate-100 lg:hover:text-slate-700 p-2 w-full cursor-pointer'>
             {
               insideViewport === 'intro' ? (
                 <>
                 <motion.div animate={{x:0}} initial={{x:-100}} className="hidden lg:block text-2xl font-semibold">Introduction</motion.div>
-                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold"><TiInfoLarge /></motion.div>
+                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold text-blue-700 bg-slate-200 p-2 rounded-md"><TiInfoLarge /></motion.div>
                 </>
-              ) : <><div className='hidden lg:block'>Introduction</div><div className='lg:hidden'><TiInfoLarge /></div></>
+              ) : <><div className='hidden lg:block text-slate-200'>Introduction</div><div className='lg:hidden text-slate-200 p-2 rounded-md'><TiInfoLarge /></div></>
             }
           </li>
           <li onClick={() => {
               refData.current.scrollTo(0, scrollBreakPoints.skills);
-            }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+            }} className='font-Kanit transition-all duration-300 rounded-md lg:hover:bg-slate-100 lg:hover:text-slate-700 px-2 w-full cursor-pointer'>
               
             {
               insideViewport === 'skills' ? (
                 <>
                 <motion.div animate={{x:0}} initial={{x:-100}} className="hidden lg:block text-2xl font-semibold">Skills</motion.div>
-                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold"><GiSkills /></motion.div>
+                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold bg-slate-100 text-blue-700 p-2 rounded-md"><GiSkills /></motion.div>
                 </>
               ) : <> 
                   <div className='hidden lg:block'>Skills</div>
-                  <div className='lg:hidden'><GiSkills /></div>
+                  <div className='lg:hidden text-slate-200 p-2 rounded-md'><GiSkills /></div>
                 </>
             }
           </li>
           <li onClick={() => {
               refData.current.scrollTo(0, scrollBreakPoints.projects);
-            }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+            }} className='font-Kanit transition-all duration-300 rounded-md lg:hover:bg-slate-100 lg:hover:text-slate-700 px-2 w-full cursor-pointer'>
             
             {
               insideViewport === 'projects' ? (
                 <>
                 <motion.div animate={{x:0}} initial={{x:-100}} className="hidden lg:block text-2xl font-semibold">Projects</motion.div>
-                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold"><FaProjectDiagram /></motion.div>
+                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold bg-slate-100 text-blue-700 p-2 rounded-md"><FaProjectDiagram /></motion.div>
                 </>
-              ) : <><div className='hidden lg:block'>Projects</div><div className='lg:hidden'><FaProjectDiagram /></div></>
+              ) : <><div className='hidden lg:block'>Projects</div><div className='lg:hidden text-slate-200 p-2 rounded-md'><FaProjectDiagram /></div></>
             }
           </li>
           <li onClick={() => {
               refData.current.scrollTo(0, scrollBreakPoints.courses);
-            }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+            }} className='font-Kanit transition-all duration-300 rounded-md lg:hover:bg-slate-100 lg:hover:text-slate-700 px-2 w-full cursor-pointer'>
             
             {
               insideViewport === 'courses' ? (<>
                 <motion.div animate={{x:0}} initial={{x:-100}} className="hidden lg:block text-2xl font-semibold">Statistics</motion.div>
-                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold"><ImStatsBars /></motion.div>
+                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold bg-slate-100 text-blue-700 p-2 rounded-md"><ImStatsBars /></motion.div>
                 </>
-              ) : <><div className='hidden lg:block'>Statistics</div><div className='lg:hidden'><ImStatsBars /></div></>
+              ) : <><div className='hidden lg:block'>Statistics</div><div className='lg:hidden text-slate-200 p-2 rounded-md'><ImStatsBars /></div></>
             }
             
           </li>
           <li onClick={() => {
               refData.current.scrollTo(0, scrollBreakPoints.contact);
-            }} className='font-Kanit transition-all duration-300 rounded-md hover:bg-slate-100 hover:text-slate-700 px-2 w-full cursor-pointer'>
+            }} className='font-Kanit transition-all duration-300 rounded-md lg:hover:bg-slate-100 lg:hover:text-slate-700 px-2 w-full cursor-pointer'>
               
             {
               insideViewport === 'contact' ? (<>
                 <motion.div animate={{x:0}} initial={{x:-100}} className="hidden lg:block text-2xl font-semibold">Contact</motion.div>
-                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold"><HiOutlineMail /></motion.div>
+                <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold bg-slate-100 text-blue-700 p-2 rounded-md"><HiOutlineMail /></motion.div>
                 </>
-              ) : <><div className='hidden lg:block'>Contact</div><div className='lg:hidden'><HiOutlineMail /></div></>
+              ) : <><div className='hidden lg:block'>Contact</div><div className='lg:hidden text-slate-200 p-2 rounded-md'><HiOutlineMail /></div></>
             }
             </li>
         </ul>

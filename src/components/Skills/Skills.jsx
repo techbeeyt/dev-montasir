@@ -8,7 +8,7 @@ const Skills = () => {
     console.log("Hello")
   }
   return (
-    <div className='bg-blue-300 bg-opacity-20 p-4 rounded-lg shadow-xl backdrop-blur-lg h-full'>
+    <div className='bg-blue-500 bg-opacity-20 p-4 rounded-lg shadow-xl backdrop-blur-lg h-full'>
       <div className='w-full flex justify-center items-center'>
         <h1 className='text-3xl font-DynaPuff-bold text-gray-100'>Web Technologies I use:</h1>
       </div>

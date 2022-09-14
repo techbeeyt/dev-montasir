@@ -14,7 +14,7 @@ const SubIntro = () => {
     <motion.div
             initial={{opacity: 0}}
             animate={{opacity: 1}} 
-            transition={{duration:0.5, delay: 0.3}} className='flex flex-col justify-start items-center bg-blue-400 bg-opacity-20 rounded-lg h-full pt-10'>
+            transition={{duration:0.5, delay: 0.3}} className='flex flex-col justify-start items-center bg-blue-500 bg-opacity-20 rounded-lg h-full pt-10'>
                 <div className='absolute w-full'>
                     <Quote />
                 </div>

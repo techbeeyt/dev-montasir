@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux/es/exports';
 import { setScrollBreakPoints, setScrollPosition, setInsideViewPort } from './store/AppState';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
-import Courses from './components/Courses/Courses';
+import Statistics from './Statistics/Statistics';
 
 const App = () => {
   const introRef = useRef(null);
@@ -58,13 +58,13 @@ const App = () => {
   return (
     <>
       <div className='w-screen grid grid-cols-12 min-h-screen'>
-        <div className='col-span-4 lg:col-span-2'>
-          <div className='fixed z-20 flex flex-col items-center p-4 top-0 left-0 w-1/6 h-full bg-blue-700 lg:bg-blue-500 lg:bg-opacity-25'>
+        <div className='col-span-2'>
+          <div className='fixed z-20 flex flex-col items-center lg:p-4 top-0 left-0 h-full bg-blue-800 lg:bg-blue-500 lg:bg-opacity-25'>
             <LeftSideBar refData={scrollRef} />
           </div>
         </div>
 
-        <div onScroll={handleScroll} id="scrollable" ref={scrollRef} className='col-span-8 lg:col-span-7 overflow-y-scroll hideScrollBar scroll-Container scroll-smooth'>
+        <div onScroll={handleScroll} id="scrollable" ref={scrollRef} className='col-span-10 lg:col-span-7 overflow-y-scroll hideScrollBar scroll-Container scroll-smooth'>
           <div className='h-20'>{}</div>
           <div ref={introRef}><Intro /></div>
           <div ref={skillsRef} className='h-screen pl-4 pt-4 pb-4 scroll-Section'>
@@ -74,11 +74,11 @@ const App = () => {
             <Projects />
           </div>
           <div ref={coursesRef} className='h-screen scroll-Section'>
-            <Courses />
+            <Statistics />
           </div>
           <div ref={contactRef} className='h-screen px-4 scroll-Section'>fsdaf</div>
         </div>
-        <div className='hidden lg:block lg:col-span-3 relative'>
+        <div className='hidden col-span-0 lg:block lg:col-span-3 relative'>
           <div className="fixed right-0 top-0 w-1/4 h-screen z-20">
             <RightSideBar />
           </div>

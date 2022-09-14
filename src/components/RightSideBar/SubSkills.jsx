@@ -7,7 +7,7 @@ const SubSkills = () => {
     <motion.div
             initial={{opacity: 0}}
             animate={{opacity: 1}} 
-            transition={{duration:1, delay: 0.3}} className='flex flex-col justify-start items-center bg-blue-400 bg-opacity-20 rounded-lg h-full py-6 w-full px-4 overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-indigo-500'>
+            transition={{duration:1, delay: 0.3}} className='flex flex-col justify-start items-center bg-blue-500 bg-opacity-20 rounded-lg h-full py-6 w-full px-4 overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-indigo-500'>
               <div>
                 <h1 className='font-Nunito-regular text-white mb-4 text-lg'>Projects Done With Nextjs</h1>
               </div>

@@ -31,14 +31,14 @@ const LeftSideBar = ({ refData }) => {
         <ul className='text-2xl flex flex-col text-slate-100 items-center font-Kanit gap-6 lg:gap-12'>
           <li onClick={() => {
               refData.current.scrollTo(0, scrollBreakPoints.intro);
-            }} className='font-Kanit transition-all duration-300 rounded-md lg:hover:bg-slate-100 lg:hover:text-slate-700 p-2 w-full cursor-pointer'>
+            }} className='font-Kanit transition-all duration-300 rounded-md lg:hover:bg-slate-100 lg:hover:text-slate-700 px-2 w-full cursor-pointer'>
             {
               insideViewport === 'intro' ? (
                 <>
                 <motion.div animate={{x:0}} initial={{x:-100}} className="hidden lg:block text-2xl font-semibold">Introduction</motion.div>
                 <motion.div animate={{x:0}} initial={{x:-100}} className="lg:hidden text-2xl font-semibold text-blue-700 bg-slate-200 p-2 rounded-md"><TiInfoLarge /></motion.div>
                 </>
-              ) : <><div className='hidden lg:block text-slate-200'>Introduction</div><div className='lg:hidden text-slate-200 p-2 rounded-md'><TiInfoLarge /></div></>
+              ) : <><div className='hidden lg:block'>Introduction</div><div className='lg:hidden text-slate-200 p-2 rounded-md'><TiInfoLarge /></div></>
             }
           </li>
           <li onClick={() => {

@@ -7,6 +7,7 @@ import { setScrollBreakPoints, setScrollPosition, setInsideViewPort } from './st
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Statistics from './Statistics/Statistics';
+import SkillsSection from './components/Skills/SkillsSection';
 
 const App = () => {
   const introRef = useRef(null);
@@ -68,7 +69,7 @@ const App = () => {
           <div className='h-20'>{}</div>
           <div ref={introRef}><Intro /></div>
           <div ref={skillsRef} className='h-screen scroll-Section overflow-y-scroll scrollbar-thin scrollbar-thumb-blue-600'>
-            <Skills />
+            <SkillsSection />
           </div>
           <div ref={projectsRef} className='h-screen scroll-Section pl-2 lg:pl-0 lg:pb-4'>
             <Projects />

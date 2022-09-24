@@ -8,7 +8,7 @@ import BtnSecondary from '../Buttons/BtnSecondary';
 
 const ProjectListLg = ({title, description, live_link, github_link}) => {
   return (
-    <div className='rounded-2xl overflow-hidden backdrop-blur-lg bg-blue-500 bg-opacity-20'>
+    <div className='rounded-lg lg:rounded-2xl overflow-hidden backdrop-blur-lg bg-blue-500 bg-opacity-20'>
         <div className='backdrop-blur-sm p-4 shadow-xl flex flex-col justify-center items-center gap-5'>
             <h1 className='text-xl lg:text-2xl text-gray-200 font-semibold'>{title}</h1>
             <img src={ziaHallProject} alt="Zia Hall Project" />

@@ -4,10 +4,10 @@ import LeftSideBar from './components/LeftSideBar/LeftSideBar'
 import RightSideBar from './components/RightSideBar/RightSideBar';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 import { setScrollBreakPoints, setScrollPosition, setInsideViewPort } from './store/AppState';
-import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
-import Statistics from './Statistics/Statistics';
 import SkillsSection from './components/Skills/SkillsSection';
+import Statistics from './components/Statistics/Statistics';
+import Contact from './components/Contact/Contact';
 
 const App = () => {
   const introRef = useRef(null);
@@ -16,6 +16,7 @@ const App = () => {
   const projectsRef = useRef(null);
   const coursesRef = useRef(null);
   const contactRef = useRef(null);
+  const cvDivRef = useRef(null);
 
   const scrollBreakPoints = useSelector(state => state.AppState.scrollBreakPoints);
   const scrollPosition = useSelector(state => state.AppState.scrollPosition);
@@ -23,10 +24,7 @@ const App = () => {
 
   const dispatch = useDispatch();
   const [scroll, setScroll] = useState(null);
-
-  // const handleClick = () => {
-  //   scrollRef.current.scrollTo(0, scrollBreakPoints.contact);
-  // }
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setScroll(document.getElementById('scrollable'));
@@ -56,6 +54,14 @@ const App = () => {
       }
     }
   }
+
+  const handleTransitionEnd = () => {
+    if(isOpen){
+      cvDivRef.current.classList.remove('bg-blue-200');
+      cvDivRef.current.classList.add('bg-slate-900');
+    }
+  }
+
   return (
     <>
       <div className='w-screen grid grid-cols-12 min-h-screen'>
@@ -77,10 +83,39 @@ const App = () => {
           <div ref={coursesRef} className='h-screen scroll-Section'>
             <Statistics />
           </div>
-          <div ref={contactRef} className='h-screen px-4 scroll-Section'>fsdaf</div>
+          <div ref={contactRef} className='h-screen scroll-Section'>
+            <Contact />
+          </div>
         </div>
-        <div className='hidden col-span-0 lg:block lg:col-span-3 relative'>
-          <div className="fixed right-0 top-0 w-1/4 h-screen z-20">
+        <div className='col-span-0 lg:col-span-3 relative'>
+          <div className='block lg:hidden fixed z-50 top-5 right-5 bg-blue-800/50 backdrop-blur-md rounded-full h-14 w-14 hover:outline-4 hover:outline outline-gray-500' onClick={() => setIsOpen(!isOpen)}>
+            <div className={
+                `transition-all
+                ease-in 
+                duration-[500ms]
+                fixed
+                bg-blue-200
+                top-0
+                right-0
+                rounded-full
+                ${isOpen ? 'h-[1800px]' : 'h-full'}
+                ${isOpen ? 'w-[1800px]' : 'w-full'}
+                ${isOpen ? 'translate-x-1/2' : 'translate-x-0'}
+                ${isOpen ? '-translate-y-1/2' : 'translate-y-0'}
+              `
+            } onTransitionEnd={handleTransitionEnd} ref={cvDivRef}>
+              
+            </div>
+
+            <div className={`
+                w-full h-full overflow-hidden rounded-full fixed top-0 right-0
+                ${isOpen ? '-z-10' : 'z-10'}
+              `}
+            >
+              <img src={'https://raw.githubusercontent.com/techbeeyt/data/main/montasir.jpg'} alt="Montasir" />
+            </div>
+          </div>
+          <div className="hidden lg:block fixed right-0 top-0 w-1/4 h-screen z-20">
             <RightSideBar />
           </div>
         </div>

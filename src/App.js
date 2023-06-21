@@ -8,8 +8,10 @@ import Projects from './components/Projects/Projects';
 import SkillsSection from './components/Skills/SkillsSection';
 import Statistics from './components/Statistics/Statistics';
 import Contact from './components/Contact/Contact';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import mobilelogo from './assets/images/mlogo.png';
+import Quote from './components/Intro/Quote';
+import { HiExternalLink } from 'react-icons/hi';
 
 const App = () => {
   const introRef = useRef(null);
@@ -91,9 +93,13 @@ const App = () => {
         <div className='col-span-0 lg:col-span-3 relative'>
           {/* { This part is for Mobile Version Intro } */
             insideViewport === 'intro' ? (
-              <div className='block lg:hidden fixed z-50 top-5 right-5 bg-blue-800/50 backdrop-blur-md rounded-full h-12 w-12 hover:outline-4 hover:outline outline-gray-500' onClick={() => {
-                setIsOpen(!isOpen)
+              <div className='block lg:hidden fixed z-50 top-5 right-5 bg-blue-800/50 backdrop-blur-md rounded-full h-12 w-12 outline-2 hover:outline-4 hover:outline outline-gray-500' onClick={(e) => {
+                if(isOpen){
+                  setShowMobileIntro(false);
+                } 
+                setIsOpen(!isOpen);
               }}>
+                <Quote />
                 <div className={
                     `transition-all
                     ease-in 
@@ -113,58 +119,79 @@ const App = () => {
                 </div>
                 {
                   showMobileIntro ? (
-                    <div className='fixed top-0 right-0 w-screen h-screen translate-x-5 -translate-y-5'>
-                      <div className='p-4 font-CMUSerifRoman text-blue-50/80 flex flex-col justify-start items-start gap-2'>
-                        <IntroSection index={0}>
-                          <div className='
-                            flex justify-start items-center gap-2
-                          '>
-                            <div className='w-14'>
-                              <img src={mobilelogo} alt="mobilelogo" />
+                    <AnimatePresence>
+                      <div id='intro-container' className='fixed top-0 right-0 w-screen h-screen translate-x-5 -translate-y-5'>
+                        <div className='p-4 font-CMUSerifRoman text-blue-50/80 flex flex-col justify-start items-start gap-2'>
+                          <IntroSection index={0}>
+                            <div className='
+                              flex justify-start items-center gap-2 py-3
+                            '>
+                              <div className='w-14'>
+                                <img src={mobilelogo} alt="mobilelogo" />
+                              </div>
+                              <div className='flex flex-col justify-start items-start'>
+                                <span className='text-3xl font-bold '>Montasir Mahmud</span>
+                                <span className='text-lg'>Full Stack Web Developer</span>
+                              </div>
                             </div>
-                            <div className='flex flex-col justify-start items-start'>
-                              <span className='text-3xl font-bold '>Montasir Mahmud</span>
-                              <span className='text-lg'>Full Stack Web Developer</span>
+                          </IntroSection>
+                          <DividerLine index={0} />
+                          <IntroSection index={1}>
+                            <span className='text-xl font-semibold'>Summery</span>
+                            <div className='text-justify'>
+                              I am passionate about building excellent software that improves the lives of those around me. I specialize in creating software for clients ranging from individuals and small-businesses all the way to large enterprise corporations.
                             </div>
-                          </div>
-                        </IntroSection>
-                        <DividerLine index={0} />
-                        <IntroSection index={1}>
-                          <span className='text-2xl font-semibold'>Summery</span>
-                          <div className='text-justify'>
-                            I am passionate about building excellent software that improves the lives of those around me. I specialize in creating software for clients ranging from individuals and small-businesses all the way to large enterprise corporations.
-                          </div>
-                        </IntroSection>
-                        <DividerLine index={1} />
-                        <IntroSection index={2}>
-                          <span className='text-2xl font-semibold'>Education</span>
-                          <div className='text-justify'>
-                            <span className='text-lg font-semibold'>B.Sc. in Computer Science and Engineering</span>
-                            <span className='text-lg'> (Daffodil International University)</span>
-                          </div>
-                        </IntroSection>
-                        <DividerLine index={2} />
-                        <IntroSection index={2}>
-                          <span className='text-2xl font-semibold'>Experience</span>
-                          <div className='text-justify'>
-                            <span className='text-lg font-semibold'>1. Junior Software Engineer</span>
-                            <span className='text-lg'> (Codestudio, Rajshahi)</span>
-                          </div>
-                          <div className='text-justify'>
-                            <span className='text-lg font-semibold'>2. Level One Seller</span>
-                            <span className='text-lg'> (Fiverr)</span>
-                          </div>
-                        </IntroSection>
-                        <DividerLine index={3} />
-                        <IntroSection index={3}>
-                          <span className='text-2xl font-semibold'>Hobby</span>
-                          <div className='text-justify'>
-                            <span className='text-lg font-semibold'>Playing Cricket</span>
-                            <span className='text-lg'> (Daffodil International University)</span>
-                          </div>
-                        </IntroSection>
+                          </IntroSection>
+                          <DividerLine index={1} />
+                          <IntroSection index={2}>
+                            <div>
+                              <span className='text-xl font-semibold'>Education</span>
+                              <div className='text-justify'>
+                                <span className='text-lg font-semibold'>B.Sc. in Computer Science and Engineering</span>
+                                <span className='text-lg'> (Rajshai University of Engineering and Technology)</span>
+                              </div>
+
+                              <div className='text-justify'>
+                                <span className='text-lg font-semibold'>Cantoment Public School and College, Rangpur</span>
+                                <span className='text-lg'> (Higher Secondary School Certificate)</span>
+                              </div>
+                            </div>
+                          </IntroSection>
+                          <DividerLine index={2} />
+                          <IntroSection index={2}>
+                            <span className='text-xl font-semibold'>Experience</span>
+                            <div className='text-justify'>
+                              <span className='text-lg font-semibold'>1. Junior Software Engineer</span>
+                              <span className='text-lg'> (Codestudio, Rajshahi)</span>
+                            </div>
+                            <div className='text-justify'>
+                              <span className='text-lg font-semibold'>2. Level One Seller</span>
+                              <span className='text-lg'> (Fiverr)</span>
+                            </div>
+
+                            <div className='text-justify'>
+                              <span className='text-lg font-semibold'>3. Web Developer Internee</span>
+                              <span className='text-lg'> (Qubitech Solutions, Rajshahi)</span>
+                            </div>
+                          </IntroSection>
+                          <DividerLine index={3} />
+                          <IntroSection index={3}>
+                            <span className='text-xl font-semibold'>Certificates</span>
+                            <div className='text-justify'>
+                            <span className='text-lg font-semibold'>1. Frontend Development with ReactJS and Bootstrap</span>
+                              <a href="https://ude.my/" target='_blank' rel='noreferrer' className='text-lg flex justify-start gap-1 items-center'> (Check Credentials <HiExternalLink />)</a>
+                            </div>
+                          </IntroSection>
+                          <DividerLine index={3} />
+                          <IntroSection index={3}>
+                            <span className='text-xl font-semibold'>Hobby</span>
+                            <div className='text-justify'>
+                              <span className='text-lg'>Playing Cricket, Cycling, World Tour</span>
+                            </div>
+                          </IntroSection>
+                        </div>
                       </div>
-                    </div>
+                    </AnimatePresence>
                   ) : null
                 }
                 <div className={`
@@ -203,8 +230,10 @@ const IntroSection = ({ index, children }) => {
   return (
     <motion.div
       animate={{ translateX: 0, opacity: 1 }}
+      exit={{ opacity: 0, translateX: -10 }}
       initial={{ translateX: -10, opacity: 0 }}
       transition={{ delay: (0.5 + ( 0.1 * index)), duration: 0.3 }}
+      className='px-1'
     >
       {children}
     </motion.div>

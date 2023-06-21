@@ -8,6 +8,7 @@ import { BsLinkedin } from 'react-icons/bs';
 import { FaUniversity } from 'react-icons/fa';
 import { FaGraduationCap } from 'react-icons/fa';
 import Quote from '../Intro/Quote';
+import Links from '../../assets/data/links.data';
 
 const SubIntro = () => {
   return (
@@ -45,16 +46,16 @@ const SubIntro = () => {
               <h1 className='mt-auto px-4 text-white font-Nunito-regular'>Find out more on</h1>
               <div className='flex gap-6 mb-4 mt-2'>
                 <ToolTip title='Github'>
-                  <button className='text-gray-100' onClick={() => window.open('https://github.com/techbeeyt', '_blank')}><BsGithub size={24} /></button>
+                  <button className='text-gray-100' onClick={() => window.open(Links.github, '_blank')}><BsGithub size={24} /></button>
                 </ToolTip>
                 <ToolTip title='Linkedin'>
-                  <button className='text-gray-100' onClick={() => window.open('https://www.linkedin.com/in/montasir-mahmud-a14a19244/', '_blank')}><BsLinkedin size={22} /></button>
+                  <button className='text-gray-100' onClick={() => window.open(Links.linkedin, '_blank')}><BsLinkedin size={22} /></button>
                 </ToolTip>
                 <ToolTip title='Facebook'>
-                  <button className='text-gray-100'><BsFacebook size={23} /></button>
+                  <button className='text-gray-100' onClick={() => window.open(Links.facebook, '_blank')}><BsFacebook size={23} /></button>
                 </ToolTip>
                 <ToolTip title='Twitter'>
-                  <button className='text-gray-100'><AiFillTwitterCircle size={28} /></button>
+                  <button className='text-gray-100' onClick={() => window.open(Links.twitter, '_blank')}><AiFillTwitterCircle size={28} /></button>
                 </ToolTip>
               </div>
             </motion.div>

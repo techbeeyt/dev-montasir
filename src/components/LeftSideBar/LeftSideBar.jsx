@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
-import logo from '../../assets/images/devtasir.png';
 import { TiInfoLarge } from 'react-icons/ti';
 import { FaProjectDiagram } from 'react-icons/fa';
 import { GiSkills } from 'react-icons/gi';

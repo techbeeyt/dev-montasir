@@ -8,6 +8,8 @@ import Projects from './components/Projects/Projects';
 import SkillsSection from './components/Skills/SkillsSection';
 import Statistics from './components/Statistics/Statistics';
 import Contact from './components/Contact/Contact';
+import { motion } from 'framer-motion';
+import mobilelogo from './assets/images/mlogo.png';
 
 const App = () => {
   const introRef = useRef(null);
@@ -16,18 +18,16 @@ const App = () => {
   const projectsRef = useRef(null);
   const coursesRef = useRef(null);
   const contactRef = useRef(null);
-  const cvDivRef = useRef(null);
+  const mobileIntroRef = useRef(null);
 
-  const scrollBreakPoints = useSelector(state => state.AppState.scrollBreakPoints);
   const scrollPosition = useSelector(state => state.AppState.scrollPosition);
   const insideViewport = useSelector(state => state.AppState.insideViewport);
 
   const dispatch = useDispatch();
-  const [scroll, setScroll] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [showMobileIntro, setShowMobileIntro] = useState(false);
 
   useEffect(() => {
-    setScroll(document.getElementById('scrollable'));
     dispatch(setScrollBreakPoints({
       intro: introRef.current.getBoundingClientRect().top,
       skills: skillsRef.current.getBoundingClientRect().top,
@@ -57,9 +57,10 @@ const App = () => {
 
   const handleTransitionEnd = () => {
     if(isOpen){
-      cvDivRef.current.classList.remove('bg-blue-200');
-      cvDivRef.current.classList.add('bg-slate-900');
-    }
+      mobileIntroRef.current.classList.remove('bg-blue-300');
+      mobileIntroRef.current.classList.add('bg-slate-900');
+      setShowMobileIntro(true);
+    } else setShowMobileIntro(false);
   }
 
   return (
@@ -88,33 +89,94 @@ const App = () => {
           </div>
         </div>
         <div className='col-span-0 lg:col-span-3 relative'>
-          <div className='block lg:hidden fixed z-50 top-5 right-5 bg-blue-800/50 backdrop-blur-md rounded-full h-14 w-14 hover:outline-4 hover:outline outline-gray-500' onClick={() => setIsOpen(!isOpen)}>
-            <div className={
-                `transition-all
-                ease-in 
-                duration-[500ms]
-                fixed
-                bg-blue-200
-                top-0
-                right-0
-                rounded-full
-                ${isOpen ? 'h-[1800px]' : 'h-full'}
-                ${isOpen ? 'w-[1800px]' : 'w-full'}
-                ${isOpen ? 'translate-x-1/2' : 'translate-x-0'}
-                ${isOpen ? '-translate-y-1/2' : 'translate-y-0'}
-              `
-            } onTransitionEnd={handleTransitionEnd} ref={cvDivRef}>
-              
-            </div>
-
-            <div className={`
-                w-full h-full overflow-hidden rounded-full fixed top-0 right-0
-                ${isOpen ? '-z-10' : 'z-10'}
-              `}
-            >
-              <img src={'https://raw.githubusercontent.com/techbeeyt/data/main/montasir.jpg'} alt="Montasir" />
-            </div>
-          </div>
+          {/* { This part is for Mobile Version Intro } */
+            insideViewport === 'intro' ? (
+              <div className='block lg:hidden fixed z-50 top-5 right-5 bg-blue-800/50 backdrop-blur-md rounded-full h-12 w-12 hover:outline-4 hover:outline outline-gray-500' onClick={() => {
+                setIsOpen(!isOpen)
+              }}>
+                <div className={
+                    `transition-all
+                    ease-in 
+                    duration-[500ms]
+                    fixed
+                    bg-blue-300
+                    top-0
+                    right-0
+                    ${isOpen ? 'rounded-none' : 'rounded-full'}
+                    ${isOpen ? 'h-[1800px]' : 'h-full'}
+                    ${isOpen ? 'w-[1800px]' : 'w-full'}
+                    ${isOpen ? 'translate-x-1/2 md:translate-x-5' : 'translate-x-0'}
+                    ${isOpen ? '-translate-y-1/2 md:-translate-y-5' : 'translate-y-0'}
+                  `
+                } onTransitionEnd={handleTransitionEnd} ref={mobileIntroRef}>
+                  
+                </div>
+                {
+                  showMobileIntro ? (
+                    <div className='fixed top-0 right-0 w-screen h-screen translate-x-5 -translate-y-5'>
+                      <div className='p-4 font-CMUSerifRoman text-blue-50/80 flex flex-col justify-start items-start gap-2'>
+                        <IntroSection index={0}>
+                          <div className='
+                            flex justify-start items-center gap-2
+                          '>
+                            <div className='w-14'>
+                              <img src={mobilelogo} alt="mobilelogo" />
+                            </div>
+                            <div className='flex flex-col justify-start items-start'>
+                              <span className='text-3xl font-bold '>Montasir Mahmud</span>
+                              <span className='text-lg'>Full Stack Web Developer</span>
+                            </div>
+                          </div>
+                        </IntroSection>
+                        <DividerLine index={0} />
+                        <IntroSection index={1}>
+                          <span className='text-2xl font-semibold'>Summery</span>
+                          <div className='text-justify'>
+                            I am passionate about building excellent software that improves the lives of those around me. I specialize in creating software for clients ranging from individuals and small-businesses all the way to large enterprise corporations.
+                          </div>
+                        </IntroSection>
+                        <DividerLine index={1} />
+                        <IntroSection index={2}>
+                          <span className='text-2xl font-semibold'>Education</span>
+                          <div className='text-justify'>
+                            <span className='text-lg font-semibold'>B.Sc. in Computer Science and Engineering</span>
+                            <span className='text-lg'> (Daffodil International University)</span>
+                          </div>
+                        </IntroSection>
+                        <DividerLine index={2} />
+                        <IntroSection index={2}>
+                          <span className='text-2xl font-semibold'>Experience</span>
+                          <div className='text-justify'>
+                            <span className='text-lg font-semibold'>1. Junior Software Engineer</span>
+                            <span className='text-lg'> (Codestudio, Rajshahi)</span>
+                          </div>
+                          <div className='text-justify'>
+                            <span className='text-lg font-semibold'>2. Level One Seller</span>
+                            <span className='text-lg'> (Fiverr)</span>
+                          </div>
+                        </IntroSection>
+                        <DividerLine index={3} />
+                        <IntroSection index={3}>
+                          <span className='text-2xl font-semibold'>Hobby</span>
+                          <div className='text-justify'>
+                            <span className='text-lg font-semibold'>Playing Cricket</span>
+                            <span className='text-lg'> (Daffodil International University)</span>
+                          </div>
+                        </IntroSection>
+                      </div>
+                    </div>
+                  ) : null
+                }
+                <div className={`
+                    w-full h-full overflow-hidden rounded-full fixed top-0 right-0
+                    ${isOpen ? '-z-10' : 'z-10'}
+                  `}
+                >
+                  <img src={'https://raw.githubusercontent.com/techbeeyt/data/main/montasir.jpg'} alt="Montasir" />
+                </div>
+              </div>
+            ) : null
+          }
           <div className="hidden lg:block fixed right-0 top-0 w-1/4 h-screen z-20">
             <RightSideBar />
           </div>
@@ -124,4 +186,30 @@ const App = () => {
   )
 }
 
-export default App
+const DividerLine = ({ index }) => {
+  return (
+    <motion.div
+      animate={{ translateX: 0, opacity: 1, width: '100%' }}
+      initial={{ translateX: -10, opacity: 0, width: '0%' }}
+      transition={{ delay: (0.5 + ( 0.1 * index)), duration: 0.3 }}
+      className='
+      bg-blue-50/80 h-0.5 w-0 rounded-full
+    '>
+    </motion.div>
+  );
+}
+
+const IntroSection = ({ index, children }) => {
+  return (
+    <motion.div
+      animate={{ translateX: 0, opacity: 1 }}
+      initial={{ translateX: -10, opacity: 0 }}
+      transition={{ delay: (0.5 + ( 0.1 * index)), duration: 0.3 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+
+export default App;

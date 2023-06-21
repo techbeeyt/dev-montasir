@@ -32,6 +32,15 @@ code {
   --position-line: 0px;
 }
 
+@font-face {
+  font-family: "CMUSerifRoman";
+  src: url('./assets/fonts/cmu.concrete-roman.ttf');
+}
+
+.font-CMUSerifRoman {
+  font-family: "CMUSerifRoman";
+}
+
 .font-Josefin-Slab{
   font-family: "Josefin Slab";
   font-weight: 100;

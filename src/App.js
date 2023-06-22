@@ -120,7 +120,7 @@ const App = () => {
                 {
                   showMobileIntro ? (
                     <AnimatePresence>
-                      <div id='intro-container' className='fixed top-0 right-0 w-screen h-screen translate-x-5 -translate-y-5'>
+                      <div id='intro-container' className='fixed top-0 right-0 w-screen h-screen translate-x-5 -translate-y-5 overflow-auto'>
                         <div className='p-4 font-CMUSerifRoman text-blue-50/80 flex flex-col justify-start items-start gap-2'>
                           <IntroSection index={0}>
                             <div className='

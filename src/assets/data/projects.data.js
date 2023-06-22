@@ -1,11 +1,31 @@
 import ZiaHallImage from '../images/projects/zia-hall-project.png';
+import CoxGameShopImage from '../images/projects/coxgameshop.jpg';
+import RCHSCAAImage from '../images/projects/rchscaa.png';
 
 
 const Projects = [
   {
     id: 1,
+    name: "CoxGameShop",
+    description: "A Game Money Buy Sell Shop",
+    image: CoxGameShopImage,
+    live_link: 'https://coxgameshop.com/',
+    github_link: '',
+    used: ["Firebase", "React.js", "Node.js", "Tailwind CSS"]
+  },
+  {
+    id: 2,
+    name: "RCHSCAA",
+    description: "Rajshahi College High School Certificate Alumni Association's Official Website. I developed this website entirely by me in the company named Codestudio. It also has an admin panel. ",
+    image: RCHSCAAImage,
+    live_link: 'http://rchscaa-by.code-studio4.com/',
+    github_link: '',
+    used: ["Firebase", "React.js", "Node.js", "Tailwind CSS"]
+  },
+  {
+    id: 3,
     name: "Zia Hall Project",
-    description: "Zia Hall is a 3D model of a hall in the Zia Pueblo. It was created using the Unity game engine and the SketchUp modeling software. The model was created for the Zia Pueblo Tribal Museum and Cultural Center.",
+    description: "It is my first project. I did this when I had completed learning HTML and CSS.",
     image: ZiaHallImage,
     live_link: '',
     github_link: '',

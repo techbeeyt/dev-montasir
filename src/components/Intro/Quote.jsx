@@ -39,11 +39,11 @@ const Quote = () => {
             delay:3
         }}
         >
-        <div className='grid grid-cols-6 w-full'>
+        <div className='grid grid-cols-8 md:grid-cols-6 w-full'>
             <div className='col-span-1 text-gray-100 flex justify-end text-sm md:text-base'>
                 <RiDoubleQuotesL />
             </div>
-                <p className='text-gray-100 font-Nunito-light col-span-4'>
+                <p className='text-gray-100 font-Nunito-light col-span-6 md:col-span-4 leading-[15px] md:leading-normal'>
                     {quotes[Math.floor(Math.random() * 10) % quotes.length]}
                 </p>
             <div className='col-span-1 text-gray-100 flex justify-start items-end text-sm md:text-base'>

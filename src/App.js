@@ -44,7 +44,7 @@ const App = () => {
         contact: contactRef.current.getBoundingClientRect().top,
       }))
       dispatch(setInsideViewPort('intro'));
-    }, 2500);
+    }, 4000);
     //eslint-disable-next-line
   }, [])
 

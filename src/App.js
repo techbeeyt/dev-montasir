@@ -12,8 +12,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import mobilelogo from './assets/images/mlogo.png';
 import Quote from './components/Intro/Quote';
 import { HiExternalLink } from 'react-icons/hi';
+import { BarLoader } from 'react-spinners';
 
 const App = () => {
+  const [isAppLoading, setIsAppLoading] = useState(true);
+
   const introRef = useRef(null);
   const scrollRef = useRef(null);
   const skillsRef = useRef(null);
@@ -30,14 +33,18 @@ const App = () => {
   const [showMobileIntro, setShowMobileIntro] = useState(false);
 
   useEffect(() => {
-    dispatch(setScrollBreakPoints({
-      intro: introRef.current.getBoundingClientRect().top,
-      skills: skillsRef.current.getBoundingClientRect().top,
-      projects: projectsRef.current.getBoundingClientRect().top,
-      courses: coursesRef.current.getBoundingClientRect().top,
-      contact: contactRef.current.getBoundingClientRect().top,
-    }))
-    dispatch(setInsideViewPort('intro'));
+    setTimeout(() => {
+      setIsAppLoading(false);
+
+      dispatch(setScrollBreakPoints({
+        intro: introRef.current.getBoundingClientRect().top,
+        skills: skillsRef.current.getBoundingClientRect().top,
+        projects: projectsRef.current.getBoundingClientRect().top,
+        courses: coursesRef.current.getBoundingClientRect().top,
+        contact: contactRef.current.getBoundingClientRect().top,
+      }))
+      dispatch(setInsideViewPort('intro'));
+    }, 2500);
     //eslint-disable-next-line
   }, [])
 
@@ -67,7 +74,14 @@ const App = () => {
 
   return (
     <>
-      <div className='w-screen grid grid-cols-12 min-h-screen'>
+      {
+        isAppLoading ? (
+          <div className='w-screen h-screen backdrop-blur-xl backdrop-brightness-50 flex justify-center items-center'>
+            <BarLoader
+              color={'#ffffff'}
+            />
+          </div>
+        ) : (<div className='w-screen grid grid-cols-12 min-h-screen'>
         <div className='relative col-span-2'>
           <div className='fixed z-20 flex flex-col items-center lg:p-4 top-0 left-0 h-full  lg:bg-blue-500 lg:bg-opacity-25 lg:w-1/6'>
             <LeftSideBar refData={scrollRef} />
@@ -208,7 +222,8 @@ const App = () => {
             <RightSideBar />
           </div>
         </div>
-      </div>
+      </div>)
+      }
     </>
   )
 }

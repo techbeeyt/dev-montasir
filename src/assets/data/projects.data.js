@@ -18,7 +18,7 @@ const Projects = [
     name: "RCHSCAA",
     description: "Rajshahi College High School Certificate Alumni Association's Official Website. I developed this website entirely by me in the company named Codestudio. It also has an admin panel. ",
     image: RCHSCAAImage,
-    live_link: 'http://rchscaa-by.code-studio4.com/',
+    live_link: 'https://rchscaa.org/',
     github_link: '',
     used: ["Firebase", "React.js", "Node.js", "Tailwind CSS"]
   },

@@ -259,7 +259,6 @@ import BtnSecondary from "../Buttons/BtnSecondary";
 // export default ProjectListLg;
 
 import { useRef } from "react";
-import { Link } from "react-router-dom";
 import { SiNetlify } from "react-icons/si";
 import { AiOutlineGithub } from "react-icons/ai";
 
@@ -329,10 +328,6 @@ const ProjectListLg = ({ project }) => {
       onMouseMove={handleMouseMove}
     >
       <div className="backdrop-blur-sm p-4 shadow-xl flex flex-col justify-center items-center gap-5">
-        <h1 className="text-xl lg:text-2xl text-gray-200 font-semibold">
-          {project.name}
-        </h1>
-
         {/* Scrollable image on hover */}
         <div className="overflow-hidden rounded-lg bg-black">
           <div
@@ -351,29 +346,32 @@ const ProjectListLg = ({ project }) => {
       </div>
 
       <div className="w-full flex justify-center items-center mt-4 flex-col p-4">
-        <h2 className="text-xl text-gray-200 font-semibold hidden lg:block">
-          Description
-        </h2>
+        <h1 className="text-xl text-gray-200 font-medium">{project.name}</h1>
         <p className="text-white font-Nunito-light hidden lg:block">
           {project.description}
         </p>
-        <Link
-          to={`/projects/${project.id}`}
-          className="rounded-md text-slate-200 px-2 py-1 font-Nunito-light"
-        >
+        <button className="rounded-md text-slate-200 px-2 py-1 font-Nunito-light">
           See Details
-        </Link>
+        </button>
       </div>
 
       <div className="flex justify-center items-center py-4 gap-4">
-        <div onClick={() => console.log("Hello")}>
+        <a href={project.live_link} target="_blank" rel="noopener noreferrer">
           <BtnPrimary>
             <SiNetlify /> Live
           </BtnPrimary>
-        </div>
-        <BtnSecondary>
-          <AiOutlineGithub /> Github
-        </BtnSecondary>
+        </a>
+        {project.github_link && (
+          <a
+            href={project.github_link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BtnSecondary>
+              <AiOutlineGithub /> Github
+            </BtnSecondary>
+          </a>
+        )}
       </div>
     </div>
   );

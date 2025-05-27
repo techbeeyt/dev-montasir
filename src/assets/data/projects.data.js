@@ -1,15 +1,11 @@
-import CoxGameShopImage from "../images/projects/coxgameshop.jpg";
-import RCHSCAAImage from "../images/projects/rchscaa.png";
-import DataCopsImage from "../images/projects/1.jpg";
-import SaybrieflyImage from "../images/projects/saybriefly.jpg";
-
 const Projects = [
   {
     id: 1,
     name: "Datacops",
     description:
       "TryDataCops is a first-party analytics and bot protection tool that collects accurate user data and defends any website from bots and fraud.",
-    image: DataCopsImage,
+    image:
+      "https://res.cloudinary.com/ddn8d9v4a/image/upload/v1748340893/trydatacops.com-DataCops_The_Cleanest_Most_Reliable_Web_Analytics-fpscreenshot_ysayck.jpg",
     live_link: "https://trydatacops.com/",
     github_link: "",
     used: [
@@ -25,7 +21,8 @@ const Projects = [
     name: "Saybriefly",
     description:
       "SayBriefly is an AI-powered summarization tool that helps you quickly generate concise summaries from long texts, articles, or documents.",
-    image: SaybrieflyImage,
+    image:
+      "https://res.cloudinary.com/ddn8d9v4a/image/upload/v1748341145/saybriefly.com-Home_Say_Briefly-fpscreenshot-1_2_1_pgwpzl.jpg",
     live_link: "https://saybriefly.com",
     github_link: "",
     used: ["Unity", "SketchUp", "3D Modeling", "3D Animation"],
@@ -35,7 +32,8 @@ const Projects = [
     name: "CoxGameShop",
     description:
       "Cox Game Shop is your go-to online store for top-up services, gaming accounts, and digital goods tailored for Bangladeshi gamers.",
-    image: CoxGameShopImage,
+    image:
+      "https://res.cloudinary.com/ddn8d9v4a/image/upload/v1748341352/coxgameshop.com-Cox_Gameshop_Cox_Gameshop_is_a_top-up_website_in_Bangladesh-fpscreenshot_g3dr1d.jpg",
     live_link: "https://coxgameshop.com/",
     github_link: "",
     used: ["Firebase", "React.js", "Node.js", "Tailwind CSS"],
@@ -45,7 +43,8 @@ const Projects = [
     name: "RCHSCAA",
     description:
       "Rajshahi College High School Certificate Alumni Association's Official Website. I developed this website entirely by me in the company named Codestudio. It also has an admin panel. ",
-    image: RCHSCAAImage,
+    image:
+      "https://res.cloudinary.com/ddn8d9v4a/image/upload/v1748341588/rchscaa.org-_-fpscreenshot_cnusvu.jpg",
     live_link: "https://rchscaa.org/",
     github_link: "",
     used: ["Firebase", "React.js", "Node.js", "Tailwind CSS"],

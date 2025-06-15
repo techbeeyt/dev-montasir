@@ -9,6 +9,7 @@ import { FaUniversity } from 'react-icons/fa';
 import { FaGraduationCap } from 'react-icons/fa';
 import Quote from '../Intro/Quote';
 import Links from '../../assets/data/links.data';
+import ProfilePhoto from '../../assets/images/Montasir-Mahmud.webp';
 
 const SubIntro = () => {
   return (
@@ -20,7 +21,7 @@ const SubIntro = () => {
                     <Quote />
                 </div>
               <div className='relative w-32 h-32 bg-blue-700 rounded-full overflow-y-hidden group outline-blue-700 outline-4 outline hover:outline-blue-600'>
-                <img src={'https://raw.githubusercontent.com/techbeeyt/data/main/montasir.jpg'} alt="Montasir" />
+                <img src={ProfilePhoto} alt="Montasir" />
                 <div className='top-0 absolute z-30 bg-gradient-to-tr from-stone-800 to-blue-700 opacity-25 hover:opacity-0 transition-all duration-300 w-32 h-32'></div>
               </div>
               <h1 className='mt-4 px-4 text-white font-Nunito-regular'>About Me</h1>
